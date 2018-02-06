@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">StartMono</string>
+    <string name="name">name</string>
+    <string name="done">Done</string>
+    <string name="fails_name">please enter your name</string>
+    <string name="success_name">name successful</string>
+    <string name="entered_name">you have entered a name , try another one</string>
+</resources>
