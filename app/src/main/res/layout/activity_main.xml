@@ -32,7 +32,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="#4eaeeF"
-        android:text="START GAME"
+        android:text="Start Game"
         android:textColor="#FD1548"
         android:textSize="25dp"
         android:textStyle="italic"
