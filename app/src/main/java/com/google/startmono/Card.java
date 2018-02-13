@@ -81,10 +81,10 @@ public class Card {
 
     public Image GetCard_View(){return this.Card_View;}
 
-    public void SetBought (int ownerID)
+    public void SetBought (int OwnerID)
     {
         this.Bought=true;
-        this.OwnerId=ownerID;
+        this.OwnerId=OwnerID;
     }
 
     public boolean GetBought() {return  this.Bought;}

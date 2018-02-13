@@ -254,7 +254,7 @@ public class MainActivity extends AppCompatActivity {
                     finish ();
                     startActivity (Game);
                 }else {
-                    Toast.makeText (MainActivity.this, "This Game are made for 2-6 players", Toast.LENGTH_SHORT).show ();
+                    Toast.makeText (MainActivity.this, "This game are made for 2-6 players", Toast.LENGTH_SHORT).show ();
 
                 }
             }

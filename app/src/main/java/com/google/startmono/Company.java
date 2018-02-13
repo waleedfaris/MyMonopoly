@@ -7,9 +7,9 @@ public class Company {
     private String name ; // the type of the company
     private int price ; // the price pf the card
 
-    public Company (String name,int money)
+    public Company (String name,int Money)
     {
-        this.price=money;
+        this.price=Money;
         this.name=name;
     }
 

@@ -12,12 +12,12 @@ public class Surprise {
         int if_command;// if 1-> תחליף לכרטיס פקודה  if 0 -> nothing
 
 
-        public surprise (int money , String con,int preson ,int com)
+        public surprise (int money , String con,int preson ,int comm)
         {
             this.money=money;
             this.the_content=con;
             this.exit_from_preson=preson;
-            this.if_command=com;
+            this.if_command=comm;
         }
 
         public int Getmoney()

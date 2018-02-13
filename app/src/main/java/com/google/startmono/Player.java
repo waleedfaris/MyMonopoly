@@ -81,8 +81,8 @@ public class Player {
     }
 
 
-    public void SetN(String Name){
-        this.playername=Name;
+    public void SetN(String ame){
+        this.playername=ame;
     }
 
 }

@@ -30,7 +30,7 @@ public class Rules {
 
     public Rules()
     {
-        Object="Object:\n  The object of the game is become the wealthiest player through buying, renting and selling\n" +
+        Object="OBJECT:\n  The object of the game is become the wealthiest player through buying, renting and selling\n" +
                 "property. ";
         Equipment="Equipment:\n The equipment consists of a board, 2 dice, tokens, 32 houses and 12 hotels. There are\n" +
                 "16 Chance and 16 Community Chest cards, a Title Deed card for each property (28 total) and play\n" +

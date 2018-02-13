@@ -22,7 +22,8 @@ public class thegame extends AppCompatActivity {
             public void onClick(View view) {
                 final AlertDialog B = new AlertDialog.Builder (thegame.this).create ();
                 B.setTitle ("RULE");
-                B.setMessage ("            have fun my friend");
+                B.setMessage ("            have fun boy " +
+                        "");
                 B.setIcon (R.mipmap.monopolygrey);
                 B.show ();
             }
