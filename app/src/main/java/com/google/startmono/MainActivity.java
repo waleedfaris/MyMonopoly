@@ -21,16 +21,21 @@ import com.hitomi.cmlibrary.OnMenuStatusChangeListener;
 public class MainActivity extends AppCompatActivity {
 
     CircleMenu circleMenu;
-    private String[] m_Text ;
-
+    private Player[] PLgame;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         circleMenu = (CircleMenu) findViewById(R.id.circle_menu);
         final AlertDialog[] Dilog = new AlertDialog[1];
-
-        m_Text=new String[6];
+        final Integer StartMoney=1000;
+        int i= 0 ;
+        PLgame=new Player[6];
+        for(;i<6;i++)
+        {
+            PLgame[i]=new Player (null,i,StartMoney);
+        }
         circleMenu.setMainMenu(Color.parseColor("#000000"), R.mipmap.monopoly, R.mipmap.monopoly);
         circleMenu.measure (500,500);
         circleMenu.addSubMenu(Color.parseColor("#0000ff"), R.mipmap.icon1)
@@ -48,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                                                  public void onMenuSelected(int index) {
                                                      switch (index) {
                                                          case 0:
-                                                                if(m_Text[0]==null) {
+                                                                if(PLgame[0].GetN ()==null||PLgame[0].GetN ()=="") {
                                                                     AlertDialog.Builder Mbuilder = new AlertDialog.Builder (MainActivity.this);
                                                                     View Mview = getLayoutInflater ().inflate (R.layout.customalertdialog, null);
                                                                     final EditText Mname = (EditText) Mview.findViewById (R.id.name);
@@ -69,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                                                                     });
-                                                                    m_Text[0] = Mname.getText ().toString ();
+                                                                    PLgame[0].SetN (Mname.getText ().toString ());
                                                                     Mbuilder.setView (Mview);
                                                                     Dilog[0] = Mbuilder.create ();
                                                                     Dilog[0].show ();
@@ -80,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                                                                 }
                                                              break;
                                                          case 1:
-                                                             if(m_Text[1]==null) {
+                                                             if(PLgame[1].GetN ()==null||PLgame[1].GetN ()=="") {
                                                                  AlertDialog.Builder Mbuilder = new AlertDialog.Builder (MainActivity.this);
                                                                  View Mview = getLayoutInflater ().inflate (R.layout.customalertdialog, null);
                                                                  final EditText cname = (EditText) Mview.findViewById (R.id.name);
@@ -97,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                                                                          }
                                                                      }
                                                                  });
-                                                                 m_Text[1] = cname.getText ().toString ();
+                                                                 PLgame[1].SetN (cname.getText ().toString ());
                                                                  Mbuilder.setView (Mview);
                                                                  Dilog[0] = Mbuilder.create ();
                                                                  Dilog[0].show ();
@@ -107,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                                                              }
                                                              break;
                                                          case 2:
-                                                             if(m_Text[2]==null) {
+                                                             if(PLgame[2].GetN ()==null||PLgame[2].GetN ()=="") {
                                                                  AlertDialog.Builder Mbuilder = new AlertDialog.Builder (MainActivity.this);
                                                                  View Mview = getLayoutInflater ().inflate (R.layout.customalertdialog, null);
                                                                  final EditText xname = (EditText) Mview.findViewById (R.id.name);
@@ -124,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
                                                                          }
                                                                      }
                                                                  });
-                                                                 m_Text[2] = xname.getText ().toString ();
+                                                                 PLgame[2].SetN (xname.getText ().toString ());
                                                                  Mbuilder.setView (Mview);
                                                                  Dilog[0] = Mbuilder.create ();
                                                                  Dilog[0].show ();
@@ -134,7 +139,7 @@ public class MainActivity extends AppCompatActivity {
                                                              }
                                                              break;
                                                          case 3:
-                                                             if(m_Text[3]==null) {
+                                                             if(PLgame[3].GetN ()==null||PLgame[3].GetN ()=="") {
                                                                  AlertDialog.Builder Mbuilder = new AlertDialog.Builder (MainActivity.this);
                                                                  View Mview = getLayoutInflater ().inflate (R.layout.customalertdialog, null);
                                                                  final EditText vname = (EditText) Mview.findViewById (R.id.name);
@@ -151,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
                                                                          }
                                                                      }
                                                                  });
-                                                                 m_Text[3] = vname.getText ().toString ();
+                                                                 PLgame[3].SetN (vname.getText ().toString ());
                                                                  Mbuilder.setView (Mview);
                                                                  Dilog[0] = Mbuilder.create ();
                                                                  Dilog[0].show ();
@@ -161,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
                                                              }
                                                              break;
                                                          case 4:
-                                                             if(m_Text[4]==null) {
+                                                             if(PLgame[4].GetN ()==null||PLgame[4].GetN ()=="") {
                                                                  AlertDialog.Builder Mbuilder = new AlertDialog.Builder (MainActivity.this);
                                                                  View Mview = getLayoutInflater ().inflate (R.layout.customalertdialog, null);
                                                                  final EditText bname = (EditText) Mview.findViewById (R.id.name);
@@ -178,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
                                                                          }
                                                                      }
                                                                  });
-                                                                 m_Text[4] = bname.getText ().toString ();
+                                                                 PLgame[4].SetN (bname.getText ().toString ());
                                                                  Mbuilder.setView (Mview);
                                                                  Dilog[0] = Mbuilder.create ();
                                                                  Dilog[0].show ();
@@ -188,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
                                                              }
                                                              break;
                                                          case 5:
-                                                             if(m_Text[5]==null) {
+                                                             if(PLgame[5].GetN ()==null||PLgame[5 ].GetN ()=="") {
                                                                  AlertDialog.Builder Mbuilder = new AlertDialog.Builder (MainActivity.this);
                                                                  View Mview = getLayoutInflater ().inflate (R.layout.customalertdialog, null);
                                                                  final EditText hname = (EditText) Mview.findViewById (R.id.name);
@@ -205,7 +210,7 @@ public class MainActivity extends AppCompatActivity {
                                                                          }
                                                                      }
                                                                  });
-                                                                 m_Text[5] = hname.getText ().toString ();
+                                                                 PLgame[5].SetN (hname.getText ().toString ());
                                                                  Mbuilder.setView (Mview);
                                                                  Dilog[0] = Mbuilder.create ();
                                                                  Dilog[0].show ();
@@ -239,13 +244,14 @@ public class MainActivity extends AppCompatActivity {
                 Integer i = 0,count=0 ;
                 for(;i<6;i++)
                 {
-                    if(m_Text[i]!=null)
+                    if(PLgame[i].GetN ()!=null)
                     {
                         count++;
                     }
                 }
                 if(count>=2 && count<=6) {
                     Intent Game = new Intent (MainActivity.this, thegame.class);
+                    finish ();
                     startActivity (Game);
                 }else {
                     Toast.makeText (MainActivity.this, "This Game are made for 2-6 players", Toast.LENGTH_SHORT).show ();
